@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, Image, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import {FontAwesome5} from '@expo/vector-icons';
 
-export default function header(){
+export default function header({navigation}){
   return (
       <View style={styles.header}>
         <Text>Histórias</Text>
         <View style={styles.icones}>
-          <FontAwesome5 name="search" size={24} color="white"/>
+          <FontAwesome5 name="search" size={24} color="white" onPress={() => navigation.navigate('SearchScreen')}/>
           <FontAwesome5 name="home" size={24} color="white"/>
         </View>
       </View>
@@ -16,7 +16,7 @@ export default function header(){
 
 const styles = StyleSheet.create({
 header:{
-    height:50,
+    height: 50,
     padding:10,
     backgroundColor: '#ff0000',
     alignItems: 'center',
@@ -24,7 +24,6 @@ header:{
     flexDirection: "row",
   },
 icones:{
-  justifyContent: 'space-between',
   flexDirection: "row",
 }
 });
