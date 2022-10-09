@@ -1,10 +1,12 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-export default function SearchScreen({navigation}){
+import Pesquisa from '../templates/pesquisa';
+
+export default function SearchScreen(){
     return(
         <View>
-            <Text>Aula 05.03 - Stack Navigation - Parte 2</Text>
+            <Pesquisa />
         </View>
     )
 }

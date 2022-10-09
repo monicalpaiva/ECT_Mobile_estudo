@@ -1,20 +1,47 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { StyleSheet, Text, Image, View} from 'react-native';
 
 import { FlatList } from 'react-native-gesture-handler';
 
 export default function conteudo() {
-  const [conteudo, setConteudo] = useState([]);
-
-  useEffect(function(){
-    async function getData(){
-      const response = await fetch("https://raw.githubusercontent.com/monicalpaiva/sacinomapi/main/autores.json");
-      const conteudoServidor = await response.json();
-      //console.log(conteudo);
-      setConteudo(conteudoServidor)
+const autores = [
+    {
+        id: 1,
+        nome: 'Monica',
+        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in lacus sollicitudin, scelerisque libero non, pellentesque nibh.Praesent imperdiet nulla orci, ac sodales nulla efficitur at. Aliquam at velit et ipsum venenatis facilisis a a libero. Fusce faucibus, est ornare sodales sollicitudin, risus neque rhoncus lorem, a molestie neque nunc in odio. Mauris tincidunt vestibulum posuere. Morbi imperdiet dignissim ultricies. Ut dui tellus, posuere egestas urna sit amet, convallis volutpat diam. Cras consectetur turpis velit.',
+        src: require('../assets/imagens/monica.jpg'),
+    },
+    {
+        id: 2,
+        nome: 'Cebolinha',
+        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in lacus sollicitudin, scelerisque libero non, pellentesque nibh. Praesent imperdiet nulla orci, ac sodales nulla efficitur at. Aliquam at velit et ipsum venenatis facilisis a a libero. Fusce faucibus, est ornare sodales sollicitudin, risus neque rhoncus lorem, a molestie neque nunc in odio. Mauris tincidunt vestibulum posuere. Morbi imperdiet dignissim ultricies. Ut dui tellus, posuere egestas urna sit amet, convallis volutpat diam. Cras consectetur turpis velit.',
+        src: require('../assets/imagens/cebolinha.jpg'),
+    },
+    {
+        id: 3,
+        nome: 'Franginha',
+        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in lacus sollicitudin, scelerisque libero non, pellentesque nibh. Praesent imperdiet nulla orci, ac sodales nulla efficitur at. Aliquam at velit et ipsum venenatis facilisis a a libero. Fusce faucibus, est ornare sodales sollicitudin, risus neque rhoncus lorem, a molestie neque nunc in odio. Mauris tincidunt vestibulum posuere. Morbi imperdiet dignissim ultricies. Ut dui tellus, posuere egestas urna sit amet, convallis volutpat diam. Cras consectetur turpis velit.',
+        src: require('../assets/imagens/franginha.jpg'),
+    },
+    {
+        id: 4,
+        nome: 'Chico Bento',
+        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in lacus sollicitudin, scelerisque libero non, pellentesque nibh. Praesent imperdiet nulla orci, ac sodales nulla efficitur at. Aliquam at velit et ipsum venenatis facilisis a a libero. Fusce faucibus, est ornare sodales sollicitudin, risus neque rhoncus lorem, a molestie neque nunc in odio. Mauris tincidunt vestibulum posuere. Morbi imperdiet dignissim ultricies. Ut dui tellus, posuere egestas urna sit amet, convallis volutpat diam. Cras consectetur turpis velit.',
+        src: require('../assets/imagens/chicobento.jpg'),
+    },
+    {
+        id: 5,
+        nome: 'Magali',
+        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in lacus sollicitudin, scelerisque libero non, pellentesque nibh. Praesent imperdiet nulla orci, ac sodales nulla efficitur at. Aliquam at velit et ipsum venenatis facilisis a a libero. Fusce faucibus, est ornare sodales sollicitudin, risus neque rhoncus lorem, a molestie neque nunc in odio. Mauris tincidunt vestibulum posuere. Morbi imperdiet dignissim ultricies. Ut dui tellus, posuere egestas urna sit amet, convallis volutpat diam. Cras consectetur turpis velit.',
+        src: require('../assets/imagens/magali.jpg'),
+    },
+    {
+        id: 6,
+        nome: 'Bidu',
+        descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in lacus sollicitudin, scelerisque libero non, pellentesque nibh. Praesent imperdiet nulla orci, ac sodales nulla efficitur at. Aliquam at velit et ipsum venenatis facilisis a a libero. Fusce faucibus, est ornare sodales sollicitudin, risus neque rhoncus lorem, a molestie neque nunc in odio. Mauris tincidunt vestibulum posuere. Morbi imperdiet dignissim ultricies. Ut dui tellus, posuere egestas urna sit amet, convallis volutpat diam. Cras consectetur turpis velit.',
+        src: require('../assets/imagens/bidu.jpg'),
     }
-    getData();
-  }, [])
+];
 
 function renderItem({item}){
     return <View style={styles.conteudo}>
