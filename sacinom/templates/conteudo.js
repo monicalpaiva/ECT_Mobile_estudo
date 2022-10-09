@@ -10,7 +10,7 @@ export default function conteudo() {
     async function getData(){
       const response = await fetch("https://raw.githubusercontent.com/monicalpaiva/sacinomapi/main/autores.json");
       const conteudoServidor = await response.json();
-      console.log(conteudo);
+      //console.log(conteudo);
       setConteudo(conteudoServidor)
     }
     getData();
