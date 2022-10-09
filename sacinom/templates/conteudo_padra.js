@@ -9,7 +9,7 @@ const autores = [
         id: 1,
         nome: 'Monica',
         descricao: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in lacus sollicitudin, scelerisque libero non, pellentesque nibh.Praesent imperdiet nulla orci, ac sodales nulla efficitur at. Aliquam at velit et ipsum venenatis facilisis a a libero. Fusce faucibus, est ornare sodales sollicitudin, risus neque rhoncus lorem, a molestie neque nunc in odio. Mauris tincidunt vestibulum posuere. Morbi imperdiet dignissim ultricies. Ut dui tellus, posuere egestas urna sit amet, convallis volutpat diam. Cras consectetur turpis velit.',
-        src: require('../assets/imagens/monica.jpg'),
+        src: require('https://github.com/monicalpaiva/sacinomapi/blob/main/Imagens/bidu.jpg'),
     },
     {
         id: 2,
